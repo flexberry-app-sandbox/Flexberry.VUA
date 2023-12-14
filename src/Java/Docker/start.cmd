@@ -1,0 +1,1 @@
+docker-compose -p vua-java up -d

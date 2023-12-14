@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-v-u-a-сотрудники-ку-e",
+  "editForm": "i-i-s-v-u-a-сотрудники-ку-e",
+  "external": false,
+  "caption": "Сотрудники ку",
+  "name": "IISVUAСотрудникиКуL",
+  "className": "СотрудникиКуL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-v-u-a-сотрудники-ку",
+      "modelProjection": "СотрудникиКуL"
+    }
+  ]
+}

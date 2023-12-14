@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "ООП модуля КЭДО",
+  "applicationTitle": "VUA",
+  "items": [
+    {
+      "link": null,
+      "menuName": "v-u-a",
+      "caption": "VUA",
+      "title": "VUA",
+      "children": [
+        {
+          "link": "i-i-s-v-u-a-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-v-u-a-расчетный-лист-l",
+          "menuName": null,
+          "caption": "Расчетный лист",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-v-u-a-сотрудники-ку-l",
+          "menuName": null,
+          "caption": "Сотрудники ку",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

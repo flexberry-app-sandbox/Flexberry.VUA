@@ -1,0 +1,185 @@
+﻿{
+  "name": "IISVUAРасчетныйЛист",
+  "modelName": "i-i-s-v-u-a-расчетный-лист",
+  "className": "РасчетныйЛист",
+  "nameSpace": "IIS.VUA",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодДок",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудникиКу",
+      "relatedTo": "i-i-s-v-u-a-сотрудники-ку",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "составРасчета",
+      "relatedTo": "i-i-s-v-u-a-состав-расчета",
+      "inverse": "расчетныйЛист"
+    }
+  ],
+  "projections": [
+    {
+      "name": "РасчетныйЛистE",
+      "modelName": "i-i-s-v-u-a-расчетный-лист",
+      "attrs": [
+        {
+          "name": "кодДок",
+          "caption": "Код документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "СотрудникиКу",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "СотрудникиКу.Должности",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "Должность",
+                  "hidden": false,
+                  "index": 3
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "должности",
+              "relatedTo": "i-i-s-v-u-a-должности",
+              "inverse": null
+            }
+          ],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "фио",
+              "caption": "ФИО сотрудника",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО сотрудника",
+          "name": "сотрудникиКу",
+          "relatedTo": "i-i-s-v-u-a-сотрудники-ку",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "СоставРасчетаE",
+          "caption": "Состав расчета",
+          "name": "составРасчета",
+          "relatedTo": "i-i-s-v-u-a-состав-расчета",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РасчетныйЛистL",
+      "modelName": "i-i-s-v-u-a-расчетный-лист",
+      "attrs": [
+        {
+          "name": "кодДок",
+          "caption": "Код документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "СотрудникиКу",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "СотрудникиКу.Должности",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "Должность",
+                  "hidden": false,
+                  "index": 3
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "должности",
+              "relatedTo": "i-i-s-v-u-a-должности",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фио",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "сотрудникиКу",
+          "relatedTo": "i-i-s-v-u-a-сотрудники-ку",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

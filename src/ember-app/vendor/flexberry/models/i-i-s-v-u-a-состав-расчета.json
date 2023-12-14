@@ -1,0 +1,78 @@
+﻿{
+  "name": "IISVUAСоставРасчета",
+  "modelName": "i-i-s-v-u-a-состав-расчета",
+  "className": "СоставРасчета",
+  "nameSpace": "IIS.VUA",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "ндфл",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "оклад",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "тип",
+      "type": "i-i-s-v-u-a-тип",
+      "flexberryType": "Тип",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "расчетныйЛист",
+      "relatedTo": "i-i-s-v-u-a-расчетный-лист",
+      "inverse": "составРасчета"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СоставРасчетаE",
+      "modelName": "i-i-s-v-u-a-состав-расчета",
+      "attrs": [
+        {
+          "name": "тип",
+          "caption": "Тип",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "оклад",
+          "caption": "Оклад",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "ндфл",
+          "caption": "НДФЛ",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
